@@ -1,0 +1,74 @@
+What doing?
+Track progress of cards/rewards with customized message & offers attached. 
+
+Why?
+To make customer not to forget to redeem the rewards.
+
+Benefits
+Maximum involvement of end user (customer) by making them beleive they are king because profitable business means happy & satisfied customers
+1) Become "synonyms for loyalty".
+2) Timely wow offer based on certain critaria.
+2) Reward customer feedback.
+3) Help customer to learn something new (where we embedd our advertisement appropiate level).
+4) Call out customers via social media to let them know how much they mean to you.
+5) Referal bonus.
+6) Make your customer feel like they’re part of a special & caring family.
+7) Celebrate a Major Milestone with customers.
+
+
+
+
+
+
+********************************************************************************
+To run 
+
+maven clean , install & build ( spring-boot:run )
+
+
+
+
+
+learn all 4 operation and note down url
+serial no(id), card no, Message, Offer attached
+
+push code to github
+
+******************************************************************************
+GET
+http://localhost:9081/restws/services/Rewardservice/Rewards
+http://localhost:9081/restws/services/Rewardservice/Rewards/123
+
+==================================================================================
+POST
+http://localhost:9081/restws/services/Rewardservice/Rewards
+
+ <Reward>
+        <name>shankar</name>
+        <reminder>5 week to end</reminder>
+ </Reward>
+
+//Don't use id as it is increased by one.
+
+==================================================================================
+
+PUT
+http://localhost:9081/restws/services/Rewardservice/Rewards
+
+ <Reward>
+ 		<id>124</id>
+        <name>shankar dayal</name>
+        <reminder>8 week to end</reminder>
+ </Reward>
+
+//Here id is must and id is not updatable.
+
+======================================================================================
+
+DELETE
+
+http://localhost:9081/restws/services/Rewardservice/Rewards/123
+
+//Here at last use id to which records needs to be deleted. And data given in body will not reflect.
+
+=======================================================================================
